@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+
+    int num, m, c, d, u, inv;
+
+    scanf("%d", &num);
+
+    m=num/1000;
+    
+    num%=1000;
+    
+    c=num/100;
+    num%=100;
+    
+    d=num/10;
+    
+    u=num%10;
+    
+    if(m!=0){
+    
+      inv= (u*1000)+(d*100)+(c*10)+m;
+
+      printf("\n\n %d.\n\n", inv);
+    
+      
+    }else if(c!=0){
+      
+      inv= (u*100)+(d*10)+c;
+      
+      printf("\n\n %d.\n\n", inv);
+      
+    }else if(d!=0){
+      
+      inv= (u*10)+d;
+      
+      printf("\n\n %d.\n\n", inv);
+      
+    }else{
+      
+      inv=u;
+      
+      printf("\n\n %d.\n\n", inv);
+    }
+
+system("PAUSE");
+} 
